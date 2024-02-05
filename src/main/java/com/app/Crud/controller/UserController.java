@@ -25,4 +25,9 @@ public class UserController {
     public List<UserEntity> getUsers() {
         return userService.getUsers();
     }
+
+    @GetMapping("/get")
+    public UserEntity getUser(@RequestParam Long id) {
+        return userService.getUser(id);
+    }
 }

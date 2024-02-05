@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService {
+public abstract class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
@@ -23,4 +23,12 @@ public class UserServiceImpl implements UserService {
     public List<UserEntity> getUsers() {
         return userRepository.findAll();
     }
+
+
+    @Override
+    public UserEntity getUser(Integer id) {
+        return null;
+    }
+
+
 }
